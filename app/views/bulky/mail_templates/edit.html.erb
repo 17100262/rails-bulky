@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row mb-md mt-md">
+      <div class="col-md-12">
+        <h1>Editing Mail Template</h1>
+        <%= render 'form', mail_template: @mail_template %>
+      </div>    
+  </div>
+        <%= link_to 'Show', @mail_template, class:"btn btn-primary btn-sm" %>
+        <%= link_to 'Back', mail_templates_path, class:"btn btn-primary btn-sm" %>

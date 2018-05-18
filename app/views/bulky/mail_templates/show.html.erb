@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row mb-md mt-md">
+    <center><h2>
+    <%= @mail_template.name %>
+    </h2></center>
+      <%= @mail_template.template.html_safe %>
+      <center><%= link_to 'Edit Template', edit_mail_template_path(@mail_template), class:"btn btn-primary btn-sm" %>
+      <%= link_to 'Back', mail_templates_path, class:"btn btn-primary btn-sm" %></center>
+  </div>
+</div>  
+
+

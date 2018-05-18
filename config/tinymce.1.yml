@@ -1,0 +1,9 @@
+toolbar:
+  - styleselect | bold italic | undo redo| formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat
+  - image | link
+plugins:
+  - image
+  - link
+  - template
+  - print 
+  - preview

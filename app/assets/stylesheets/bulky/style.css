@@ -1,0 +1,59 @@
+.m-0{margin: 0 !important;}
+.m-lg{margin: 25px !important;}
+.m-md{margin: 20px !important;}
+.m-sm{margin: 15px !important;}
+.m-xs{margin: 10px !important;}
+.mt-0{margin-top: 0 !important;}
+.mt-lg{margin-top: 25px !important;}
+.mt-md{margin-top: 20px !important;}
+.mt-sm{margin-top: 15px !important;}
+.mt-xs{margin-top: 10px !important;}
+.mb-0{margin-bottom: 0 !important;}
+.mb-lg{margin-bottom: 25px !important;}
+.mb-md{margin-bottom: 20px !important;}
+.mb-sm{margin-bottom: 15px !important;}
+.mb-xs{margin-bottom: 10px !important;}
+.ml-0{margin-left: 0 !important;}
+.ml-lg{margin-left: 25px !important;}
+.ml-md{margin-left: 20px !important;}
+.ml-sm{margin-left: 15px !important;}
+.ml-xs{margin-left: 10px !important;}
+.mr-0{margin-right: 0 !important;}
+.mr-lg{margin-right: 25px !important;}
+.mr-md{margin-right: 20px !important;}
+.mr-sm{margin-right: 15px !important;}
+.mr-xs{margin-right: 10px !important;}
+.p-0{padding: 0 !important;}
+.p-lg{padding: 25px !important;}
+.p-md{padding: 20px !important;}
+.p-sm{padding: 15px !important;}
+.p-xs{padding: 10px !important;}
+.pt-0{padding-top: 0 !important;}
+.pt-lg{padding-top: 25px !important;}
+.pt-md{padding-top: 20px !important;}
+.pt-sm{padding-top: 15px !important;}
+.pt-xs{padding-top: 10px !important;}
+.pb-0{padding-bottom: 0 !important;}
+.pb-lg{padding-bottom: 25px !important;}
+.pb-md{padding-bottom: 20px !important;}
+.pb-sm{padding-bottom: 15px !important;}
+.pb-xs{padding-bottom: 10px !important;}
+.pl-0{padding-left: 0 !important;}
+.pl-lg{padding-left: 25px !important;}
+.pl-md{padding-left: 20px !important;}
+.pl-sm{padding-left: 15px !important;}
+.pl-xs{padding-left: 10px !important;}
+.pr-0{padding-right: 0 !important;}
+.pr-lg{padding-right: 25px !important;}
+.pr-md{padding-right: 20px !important;}
+.pr-sm{padding-right: 15px !important;}
+.pr-xs{padding-right: 10px !important;}
+.cs-pointer{cursor: pointer !important}
+
+.radio-list-box li input[type="radio"]{
+    margin: 0 !important;
+    margin-right: 10px !important;
+    position: relative;
+}
+
+

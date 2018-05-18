@@ -1,0 +1,47 @@
+<%= form_with(model: mail_template, local: true) do |form| %>
+  <% if mail_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mail_template.errors.count, "error") %> prohibited this mail_template from being saved:</h2>
+
+      <ul>
+      <% mail_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :mail_template_name, class:"form-control" %>
+  </div>
+
+  <div class="field mt-xs">
+    <%= form.label :template %>
+    <%= form.text_area :template, id: :mail_template_template, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Mail Temlate", class:"btn btn-primary btn-sm mt-sm" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  tinymce.init({
+  selector: '#mail_template_template',
+  // height: 500,
+  theme: 'modern',
+  plugins: 'print code preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
+  toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+  image_advtab: true,
+  templates: [
+    { title: 'Test template 1', content: 'Test 1' },
+    { title: 'Test template 2', content: 'Test 2' }
+  ],
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+  ]
+ });
+</script>
+<!--</script>-->
