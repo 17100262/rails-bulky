@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bulky'
+gem 'bulky', git: "https://github.com/17100262/rails-bulky.git"
 ```
 
 And then execute:
