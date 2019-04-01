@@ -35,6 +35,12 @@ For generating views and mailers
 rails g bulky:views
 rails g bulky:mailers
 ```
+For Generating controllers
+
+```
+rails g bulky:controllers
+
+```
 
 
 ## Contributing
