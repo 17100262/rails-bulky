@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     bulky (0.1.0)
-      rails (~> 5.1.4)
       tinymce-rails
 
 GEM
@@ -140,6 +139,7 @@ DEPENDENCIES
   devise
   faker
   jquery-rails
+  rails (~> 5.1.4)
   sqlite3
 
 BUNDLED WITH

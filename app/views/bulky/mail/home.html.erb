@@ -1,8 +1,9 @@
+<div class="container mt-lg">
 <!--<div class="col-md-2 text-right">-->
       <%= link_to 'Templates', mail_templates_path, class:"btn btn-primary btn-sm" %>
 <!--</div>-->
 <%= form_tag(send_path) do %>
-  <h2>Select template</h2>
+  <h3>Select template</h3>
   <ul class="list-group radio-list-box">
   <%= collection_radio_buttons(:mail, :mail_Template_id, Bulky::MailTemplate.all, :id, :name) do |b| %>
   <li class="list-group-item radio cs-pointer"><%= b.radio_button + b.text  %>
@@ -10,17 +11,41 @@
   
   <% end %>
   </ul>
-  <h2>Enter Subject of Mail</h2>
+  <h3>Enter Subject of Mail</h3>
   
   <%= text_field_tag :subject, nil,{required: true,class:'form-control',rows: 5,columns: 10,style:'width:50%;'} %>
   
-  <h2>Select Users</h2>
+  <h3>Select Users</h3>
   <!--<br>-->
-  <ul class="list-group checked-list-box">
-  <%= collection_check_boxes(:mail, :user_ids, User.all, :id, :email) do |b| %>
-    <li class="list-group-item checkbox cs-pointer"><span class="fa fa-square-o pr-xs"></span><%= b.check_box + b.text  %> </li>
+  <button type="button" id="check_all" class="btn btn-primary">Select All</button>
+  <ul class="list-group checked-list-box" id="check_box">
+    <%= collection_check_boxes(:mail, :user_ids, User.all, :id, :email) do |b| %>
+      <li class="list-group-item checkbox cs-pointer" ><span class="fa fa-square-o pr-xs"></span><%= b.check_box + b.text  %> </li>
     <% end %>
-  </ul>  
-
+  </ul>
   <%= submit_tag "Send", class:"btn btn-primary btn-sm" %>    
 <% end %>  
+</div>
+
+
+<script>
+  $(document).ready(function () {
+  $('#check_all').on("click", function() {
+     // grouping all the checkbox using the classname
+    // alert($('input[type=checkbox]').attr('checked'))
+     var checkboxes = $('input[type=checkbox]');
+     // check whether checkboxes are selected.
+     if(checkboxes.attr('checked')){
+        // if they are selected, unchecking all the checkbox
+        checkboxes.attr("checked",false);
+        $('.checked-list-box').find('li').removeClass('list-group-item-success active');
+        $(this).parent().find('span').removeClass('fa-check-square').addClass('fa-square-o');
+     } else {
+        // if they are not selected, checking all the checkbox
+        checkboxes.attr("checked",true);
+        $('.checked-list-box').find('li').addClass('list-group-item-success active');
+        $('.checked-list-box').find('span').removeClass('fa-square-o').addClass('fa-check-square');
+     }
+   });
+  });
+</script>

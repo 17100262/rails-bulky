@@ -10,9 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
-//= require jquery3
+//= require jquery
+//= require jquery_ujs
 //= require tinymce
+//= require_tree .
 
 $(function () {
     $('.checked-list-box li input[type="checkbox"]').hide();
